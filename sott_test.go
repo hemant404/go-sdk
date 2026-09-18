@@ -19,7 +19,7 @@ import (
 // token — the API validates the AES payload exactly, so a drifted IV,
 // iteration count, salt, or timestamp format yields a token that is silently
 // rejected. If this fails, fix the implementation, not the expectation. The
-// shared parameters live in sdk-factory's manifest/sdk.yaml under `sott:`.
+// shared parameters live in the SDK generator's shared configuration under `sott:`.
 func TestSOTTGoldenValue(t *testing.T) {
 	const (
 		apiKey    = "test-api-key"

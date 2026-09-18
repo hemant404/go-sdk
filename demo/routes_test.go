@@ -18,7 +18,7 @@ import (
 // reach signed-in routes, which is the whole reason they are separate cookies.
 //
 // These tests walk the GENERATED route table rather than a hand-written list,
-// so a route added to manifest/sdk.yaml is covered the moment it appears.
+// so a route added to the shared SDK manifest is covered the moment it appears.
 
 // newTestServer builds the minimum a route's auth check needs. wrap() only
 // touches the session store, so the SDK client is deliberately absent — every

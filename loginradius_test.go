@@ -2,7 +2,7 @@ package loginradius
 
 // Parity tests for the manifest-driven behaviour of the v12 facade.
 //
-// These assert the CONCRETE values that manifest/sdk.yaml in the sdk-factory
+// These assert the CONCRETE values that the shared configuration in the LoginRadius SDK generator
 // repository declares: header names, query-parameter names, credential
 // precedence, base-URL resolution, error classification, and the full service
 // set. They are deliberately literal — if you change the manifest, these tests
@@ -504,7 +504,7 @@ func TestClientAppliesTimeoutAndPreservesCallerTransport(t *testing.T) {
 // matches the known-working algorithm rather than merely matching itself.
 //
 // If this fails, fix the implementation, not the expectation. The shared
-// parameters live in sdk-factory's manifest/sdk.yaml under `signing:`.
+// parameters live in the SDK generator's shared configuration under `signing:`.
 func TestSigningGoldenValue(t *testing.T) {
 	const (
 		secret        = "test-api-secret"

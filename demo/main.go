@@ -1,6 +1,6 @@
 // Demo HTTP service for the LoginRadius Go v12 SDK.
 //
-// The endpoint surface comes from manifest/sdk.yaml and covers registration and
+// The endpoint surface comes from the shared SDK manifest and covers registration and
 // login, profile and identifier management, password reset by token or OTP,
 // custom objects, the access-token lifecycle, MFA enrolment and challenge, and
 // passkey (WebAuthn) — backed by the v12 SDK exactly the way a customer
@@ -77,7 +77,7 @@ func main() {
 	mux.HandleFunc("/", srv.handleIndex)
 
 	// The API surface comes from demo/routes_gen.go, generated from
-	// manifest/sdk.yaml. Registering from the table (rather than by hand) is
+	// the shared SDK manifest. Registering from the table (rather than by hand) is
 	// what keeps every language's demo on the same endpoints: method checking
 	// and session enforcement are applied uniformly here instead of being
 	// re-implemented, slightly differently, in each handler.
