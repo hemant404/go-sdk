@@ -1,5 +1,7 @@
 # LoginRadius Go SDK — v12
 
+[![CI](https://github.com/LoginRadius/go-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/LoginRadius/go-sdk/actions/workflows/ci.yml)
+
 Official Go SDK for the [LoginRadius](https://www.loginradius.com) Customer Identity and Access Management (CIAM) platform.
 
 > **v12 is a major version with a new module path.** v11 customers can stay on `github.com/LoginRadius/go-sdk` indefinitely — see [Migrating from v11](#migrating-from-v11) when ready.
