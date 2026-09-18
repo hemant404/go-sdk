@@ -1,9 +1,9 @@
-# Maintained in SDK-FACTORY: languages/go/static/.github/workflows/ci.yml.mustache
-# An edit made in this repository is overwritten by the next sync — change it there.
+# GENERATED FILE — do not edit it in this repository.
+# This workflow is produced alongside the rest of this SDK and is overwritten
+# whenever the SDK is regenerated. Raise changes where the SDK is generated.
 #
-# The steps mirror languages/go/lang.yaml `verify:`, which is the factory's own
-# gate. Keeping them the same means CI cannot go green on a tree the factory
-# would reject, or the reverse.
+# These steps mirror this SDK's own build verification, so CI cannot go green
+# on a tree that verification would reject, or the reverse.
 name: CI
 
 on:
@@ -27,13 +27,13 @@ jobs:
 
       - uses: actions/setup-go@v5
         with:
-          # The module's declared floor, from the manifest — not "whatever is
-          # newest". Testing above the floor never discovers that the floor is
-          # broken for a customer still on it.
+          # The module's declared floor (see go.mod) — not "whatever is newest".
+          # Testing above the floor never discovers that the floor is broken for
+          # a customer still on it.
           go-version: '1.24'
           cache-dependency-path: go.sum
 
-      # `-diff` rather than the factory's plain `go mod tidy`: in CI an untidy
+      # `-diff` rather than a plain `go mod tidy`: in CI an untidy
       # go.mod must FAIL, not be quietly fixed so the rest of the run tests a
       # tree the repository does not actually contain.
       - name: go.mod is tidy
